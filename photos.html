@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            max-width: 50%; /* Set a max width for images to fit the screen */
+            height: auto;    /* Maintain aspect ratio */
+            border: 1px solid #ff66a3;
+            margin: 20px 0;  /* Add some margin for spacing */
+            display: block;   /* Ensure images are block elements */
+            margin-left: auto; /* Center image horizontally */
+            margin-right: auto; /* Center image horizontally */
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        #caption {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>un poco de nostalgia</h1>
+    <img id="photo" src="" alt="Memorable photo" />
+    <div id="caption"></div> <!-- Caption div -->
+    <div id="message">pulsa en la foto para ver la siguiente!</div>
+
+    <script>
+        const photos = [
+            { src: '57782452-9CFC-474B-9618-BB06082EA989copia.JPEG', caption: '🥳' },
+            { src: 'IMG_0333.jpeg', caption: 'tengo la madre más guapa' },
+            { src: 'IMG_0334.jpeg', caption: 'más cool'},
+            { src: 'IMG_0335.jpeg', caption: 'más sassy'},
+            { src: 'IMG_0338.jpeg', caption: 'con los ojos más bonitos madre mía qué envidia'},
+            { src: 'IMG_0337.jpeg', caption: 'más guapa OTRA VEZ porque qué locura'},
+            { src: 'IMG_0332.jpeg', caption: 'más inteligente'},
+            { src: 'IMG_0336.jpeg', caption: 'y más buena del mundo mundiaaaal'},
+            { src: 'IMG_0340.jpeg', caption: 'de ti ha salido el niño más guapo del universo'},
+            { src: 'IMG_2994copia.JPG', caption: 'y la niña jeje (que alguien me limpie los mocos por favor)'},
+            { src: 'IMG_3055copia.JPG', caption: 'aunque a veces no lo parezca nos queremos un montón'},
+            { src: '4DCBEAF7-D316-4C82-BEFB-9B7D08AE8709copia.JPG', caption: 'y a ti másssss'},
+            { src: '_grupo_DSC05512copia.JPG', caption: 'algunas fotitos familiares de regalo jeje'},
+            { src: 'DSCN0658copia.JPG', caption: ''},
+            { src: 'DSC05411copia.JPG', caption: ''},
+            { src: 'IMG_2305copia.JPG', caption: ''},
+            { src: 'IMG_4447copia.JPG', caption: 'gracias por quererme (y querernos) tanto'},
+            { src: 'DSC05137copia.JPG', caption: 'y tan bien'},
+            { src: 'IMG_2240copia.JPG', caption: 'bebote de regalo :)'},
+            { src: 'IMG_0331.jpeg', caption: 'y a volaaaaaaaaaaar'},
+             // Add your photo paths and captions
+        ];
+
+        let currentPhotoIndex = 0;
+
+        // Function to display the current photo and caption
+        function showPhoto() {
+            const photo = document.getElementById('photo');
+            const caption = document.getElementById('caption');
+            
+            photo.src = photos[currentPhotoIndex].src; // Set photo source
+            caption.innerText = photos[currentPhotoIndex].caption; // Set caption text
+        }
+
+        // Function to display the next photo
+        function showNextPhoto() {
+            currentPhotoIndex++;
+            if (currentPhotoIndex >= photos.length) {
+                // If it's the last photo, redirect to a final message
+                window.location.href = 'final.html';
+            } else {
+                showPhoto();
+            }
+        }
+
+        // Event listener for clicking on the photo
+        document.getElementById('photo').addEventListener('click', showNextPhoto);
+
+        // Show the first photo on page load
+        showPhoto();
+    </script>
+</body>
+</html>
