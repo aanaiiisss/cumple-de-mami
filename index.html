@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feliz cumple madreee!!! 💖💖💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            overflow: auto; 
+        }
+        h1 {
+            color: #ff66a3;
+            margin: 20px 0; 
+        }
+        #canvas {
+            border: 1px solid #ff66a3;
+            background-color: white;
+            margin-bottom: 10px;
+            max-width: 90%; 
+            max-height: 400px; 
+            height: auto; 
+        }
+        #message {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .slider-container {
+            margin: 10px 0;
+        }
+        label {
+            font-size: 18px;
+            color: #555;
+        }
+        input[type="range"] {
+            width: 300px;
+        }
+        #equation {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        #photoButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            color: white;
+            background-color: #ff66a3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #photoButton:hover {
+            background-color: #ff4c8a;
+        }
+    </style>
+</head>
+<body>
+    <h1>feliz cumple madreee!!! 💖💖💖</h1>
+
+
+    <div class="slider-container">
+        <label for="size">altura:</label>
+        <input type="range" id="size" min="5" max="30" value="16" step="1">
+    </div>
+
+    <div class="slider-container">
+        <label for="width">ancho:</label>
+        <input type="range" id="width" min="5" max="30" value="13" step="1">
+    </div>
+
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+
+    <div id="equation">
+        <p>las mates del corazón:</p>
+        <p>
+            <code>
+                x(t) = 16 * sin<sup>3</sup>(t),<br>
+                y(t) = - (13 * cos(t) - 5 * cos(2t) - 2 * cos(3t) - cos(4t))
+            </code>
+        </p>
+    </div>
+
+
+    <button id="photoButton" onclick="location.href='photos.html'">pulsa aquíííí</button>
+
+    <script src="heart.js"></script>
+</body>
+</html>
